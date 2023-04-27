@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.airportdetail.AirportDetailsFragment">
+
+    <data>
+         <variable
+            name="airport"
+            type="String" />
+
+        <variable
+            name="country"
+            type="String" />
+
+        <variable
+            name="timezone"
+            type="String" />
+
+        <variable
+            name="address"
+            type="String" />
+    </data>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <include android:id="@+id/appBar"
+              layout="@layout/toolbar_layout" />
+            <TextView
+                android:id="@+id/airportName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{airport}"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_intermediate"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintTop_toBottomOf="@id/appBar" />
+
+            <TextView
+                android:id="@+id/countryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="@{country}"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintTop_toBottomOf="@id/airportName"
+                 />
+
+            <TextView
+                android:id="@+id/timeZone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="@{timezone}"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                android:textSize="@dimen/title_size"
+                app:layout_constraintTop_toBottomOf="@id/countryName"
+                />
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="@{address}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_size"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                app:layout_constraintTop_toBottomOf="@id/timeZone" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Done"
+                android:padding="@dimen/margin_sub_avg"
+                android:layout_marginHorizontal="@dimen/margin_standard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/margin_intermediate"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

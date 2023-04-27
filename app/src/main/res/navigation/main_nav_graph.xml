@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/airportListFragment">
+
+    <fragment android:id="@+id/airportListFragment"
+        android:name="com.example.qantas.ui.airportlist.AirportListFragment"
+        tools:layout="@layout/fragment_airport_list">
+
+        <action android:id="@+id/action_airportListFragment_to_airportDetailsScreen"
+            app:destination="@id/airportDetailsScreen">
+        <argument
+            android:name="airport"
+            app:argType="com.example.qantas.model.Airport"
+            />
+        </action>
+    </fragment>
+
+    <fragment android:id="@+id/airportDetailsScreen"
+        android:name="com.example.qantas.ui.airportdetail.AirportDetailsFragment"
+        tools:layout="@layout/fragment_airport_details">
+    <argument
+        android:name="airport"
+        app:argType="com.example.qantas.model.Airport"
+        />
+    </fragment>
+</navigation>

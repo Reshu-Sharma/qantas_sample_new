@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Qantas</string>
+    <string name="error">Error</string>
+    <string name="ok_button">OK</string>
+
+    <string name="airport_name">Airport name :</string>
+    <string name="country_name">Country name : </string>
+    <string name="timezone">Timezone :</string>
+    <string name="address">Address : </string>
+
+    <string name="no_internet">No internet available</string>
+</resources>
